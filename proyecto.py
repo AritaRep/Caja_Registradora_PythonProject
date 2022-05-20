@@ -81,10 +81,11 @@ while (True):
                 cuenta.append(id[insertar-1])
                 cuenta.append(producto[insertar-1])
                 cuenta.append(precio[insertar-1])
-                imprimir_listado(cuenta,cuenta,cuenta)
+                for i in range(0, len(cuenta), 3):
+                    print(cuenta[i], ".| ", cuenta[i+1], " | ", cuenta[i+2])
                 des = input("Desea agregar otro producto a la cuenta s/n: | ")
             
-            print("La cuenta es actual es de: ", sumar_precio(cuenta))
+            print("La cuenta actual es de: ", sumar_precio(cuenta))
 
         else:
             print("No se ha registrado ningún producto")
